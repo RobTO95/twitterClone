@@ -12,4 +12,8 @@ class IndexController extends Action
     {
         $this->render('index', 'layout');
     }
+    public function inscreverse()
+    {
+        $this->render('inscreverse', 'layout');
+    }
 };
