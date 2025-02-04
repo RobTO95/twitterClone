@@ -1,0 +1,12 @@
+<h1>Index</h1>
+<ul>
+    <?php foreach ($this->view->dados as $chave => $produto) : ?>
+        <li>
+            <?= htmlspecialchars($produto['id']) ?>
+            -
+            <?= htmlspecialchars($produto['descricao']) ?>
+            -
+            <?= htmlspecialchars($produto['preco']) ?>
+        </li>
+    <?php endforeach; ?>
+</ul>
