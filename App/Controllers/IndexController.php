@@ -12,6 +12,7 @@ class IndexController extends Action
 {
     public function index()
     {
+        $this->view->login = isset($_GET['login']) ? $_GET['login'] : '';
         $this->render('index', 'layout');
     }
     public function inscreverse()
@@ -34,7 +35,7 @@ class IndexController extends Action
         $usuario = Container::getModel('Usuario');
         $usuario->__set('nome', $dados['nome']);
         $usuario->__set('email', $dados['email']);
-        $usuario->__set('senha', $dados['senha']);
+        $usuario->__set('senha', md5($dados['senha']));
 
         // Validação de cadastro
         if ($usuario->validarCadastro() && count($usuario->getUsuariaPorEmail()) == 0) {

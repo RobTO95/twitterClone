@@ -1,0 +1,22 @@
+<style>
+    nav {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        /* margin: 0 100px 0 100px; */
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: 1px solid gray;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <h1><?= $_SESSION['nome'] ?></h1>
+
+            <a class="btn btn-primary" href="/sair">Sair</a>
+
+        </nav>
+    </header>
+</body>
